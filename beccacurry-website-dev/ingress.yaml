@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: beccacurry-website-dev
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: dev-art.beccacurry.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: beccacurry-website-dev
+            port:
+              number: 80

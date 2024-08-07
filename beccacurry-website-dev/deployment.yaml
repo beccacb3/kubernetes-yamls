@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beccacurry-website-dev
+  labels:
+    app: react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: art-website-react
+  template:
+    metadata:
+      labels:
+        app: art-website-react
+    spec:
+      containers:
+      - name: react-container
+        image: beccacurry/beccacurry_art:latest
+        ports:
+        - containerPort: 3000
