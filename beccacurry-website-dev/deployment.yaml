@@ -19,3 +19,10 @@ spec:
         image: beccacurry/beccacurry_art:latest
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - mountPath: /react-app/public/images
+          name: art-vol
+      volumes:
+      - name: art-vol
+        emptyDir:
+          sizeLimit: 500Mi
