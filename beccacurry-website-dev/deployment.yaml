@@ -19,3 +19,6 @@ spec:
         image: beccacurry/beccacurry_art:latest
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - mountPath: "/react/public/images"
+          name: beccacurry-art-data

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: beccacurry-art-data
+spec:
+  storageClassName: nfs-csi
+  capacity:
+    storage: 5Gi
